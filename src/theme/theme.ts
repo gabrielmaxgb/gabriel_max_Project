@@ -3,12 +3,22 @@ import "@fontsource/alegreya-sc";
 
 declare module "@mui/material/styles" {
   export interface Theme {
+    extraColors: {
+      liblab: string;
+      white: string;
+      black: string;
+    };
     status: {
       danger: string;
     };
   }
   // allow configuration using `createTheme`
   export interface ThemeOptions {
+    extraColors?: {
+      liblab?: string;
+      white?: string;
+      black?: string;
+    };
     status?: {
       danger?: string;
     };
@@ -16,16 +26,23 @@ declare module "@mui/material/styles" {
 }
 
 export const theme = createTheme({
+  extraColors: {
+    liblab: "#5de8fc",
+    white: "#ffffff",
+    black: "#000000",
+  },
   palette: {
     primary: {
-      main: "#e9a807",
+      main: "#ff7300",
     },
     secondary: {
       main: "#000000",
     },
   },
   typography: {
-    // fontFamily: "Alegreya SC, serif",
+    allVariants: {
+      color: "#ff7300",
+    },
     fontFamily: [
       "Alegreya SC, serif",
       "-apple-system",
