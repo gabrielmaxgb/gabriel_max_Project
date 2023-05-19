@@ -19,16 +19,14 @@ export const MoviesContainer = styled(Grid)<ICustomizableStyledComponent>`
     font-size: 2rem;
     color: black;
     background-color: ${(props) => `url(${props.bgColor})`};
-    transition: 1s;
+    transition: 2s;
   }
 
   .more-button:hover {
-    /* transition: 1s; */
     background-image: ${(props) => `url(${props.bgimageonhover})`};
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    padding: 3rem 0;
     color: transparent;
   }
 `;

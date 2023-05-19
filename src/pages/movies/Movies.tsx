@@ -6,13 +6,14 @@ import smeagol from "../../assets/images/smeagol.jpg";
 import ActionArea from "../../components/common/action-area/ActionArea";
 import Header from "../../components/common/header/Header";
 import { useNavigate } from "react-router-dom";
+import AnimatedPage from "../../components/layout/animations/AnimatedPage";
 
 function Movies() {
   const theme = useTheme();
   const navigate = useNavigate();
 
   return (
-    <>
+    <AnimatedPage>
       <MoviesContainer
         bgimage={dayRivendel}
         bgimageonhover={smeagol}
@@ -25,16 +26,16 @@ function Movies() {
         <Header />
         <Button
           className="more-button"
-          onClick={() => navigate("/characters-and-quotes")}
+          onClick={() => navigate("/characters")}
           variant="contained"
         >
-          I NEED more information
+          Show more
         </Button>
         <ActionArea linearGradientColor={theme.extraColors.black}>
           <MoviesList />
         </ActionArea>
       </MoviesContainer>
-    </>
+    </AnimatedPage>
   );
 }
 

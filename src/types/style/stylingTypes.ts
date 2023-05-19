@@ -7,4 +7,5 @@ export interface ICustomizableStyledComponent extends ThemeOptions {
   border?: string;
   bgColorOnHover?: string;
   bgimageonhover?: string;
+  textColor?: string;
 }
