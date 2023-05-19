@@ -54,9 +54,7 @@ const Records = ({ currentRecords, allRecords }: IRecordsProps) => {
             color={theme.palette.primary.main}
             onKeyDown={(e) => handleKeyDown(e)}
           />
-          <Button variant="contained">
-            <SearchIcon fontSize="large" color="secondary" />
-          </Button>
+          <SearchIcon fontSize="large" color="primary" />
           <Button
             onClick={() => setSearchParam("")}
             id="clear-search-btn"
