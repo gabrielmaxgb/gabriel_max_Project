@@ -35,7 +35,11 @@ const CharactersList = () => {
   return (
     <>
       <CharacterListContainer>
-        <Records currentRecords={currentRecords} />
+        <Records
+          currentRecords={currentRecords}
+          allRecords={data?.docs}
+          // setSearchCharacters={setSearchCharacters}
+        />
         <Pagination
           nPages={nPages}
           currentPage={currentPage}

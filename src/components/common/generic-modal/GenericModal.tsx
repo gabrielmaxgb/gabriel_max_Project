@@ -8,7 +8,7 @@ import {
 } from "@mui/material";
 import { IGenericModal } from "./types";
 import { Content, QuoteContainer } from "./GenericModalStyled";
-import sauronTower from "../../../assets/images/sauronTower.png";
+import hobbitVillage from "../../../assets/images/hobbitVillage.jpg";
 import { useQuery } from "react-query";
 import { getData } from "../../../services/get/getData";
 import { QUOTES_BY_CHARACTER_QUERY_KEY } from "../../../services/consts";
@@ -48,7 +48,7 @@ const GenericModal = ({ open, handleClose, modalData }: IGenericModal) => {
 
   return (
     <Modal open={open} onClose={handleClose}>
-      <Content bgColor={theme.extraColors.black} bgimage={sauronTower}>
+      <Content bgColor={theme.extraColors.black} bgimage={hobbitVillage}>
         <QuoteContainer>
           <div>
             <Typography variant="h2">
@@ -66,7 +66,7 @@ const GenericModal = ({ open, handleClose, modalData }: IGenericModal) => {
             <Button
               size="large"
               className="action-button"
-              variant="outlined"
+              variant="contained"
               disabled={data?.docs?.length === 0 || quoteFinder === 0}
               onClick={() => {
                 setQuoteFinder(quoteFinder - 1);
@@ -77,7 +77,7 @@ const GenericModal = ({ open, handleClose, modalData }: IGenericModal) => {
             <Button
               size="large"
               className="action-button"
-              variant="outlined"
+              variant="contained"
               disabled={
                 data?.docs?.length === 0 ||
                 quoteFinder === data?.docs?.length - 1
