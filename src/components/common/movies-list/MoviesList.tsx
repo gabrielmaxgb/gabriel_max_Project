@@ -4,11 +4,13 @@ import { useQuery } from "react-query";
 import MovieCard from "../movie-card/MovieCard";
 import { MovieDTO } from "../../../services/types";
 import { getData } from "../../../services/get/getData";
+import { MOVIES_QUERY_KEY } from "../../../services/consts";
 
 function MoviesList() {
   const query = "movie";
-  const { data, isLoading, isError, error } = useQuery("lotr_movies", () =>
-    getData(query)
+  const { data, isLoading, isError, error } = useQuery(
+    [MOVIES_QUERY_KEY, query],
+    () => getData(query)
   );
 
   if (isLoading) {
@@ -36,8 +38,6 @@ function MoviesList() {
             item
             container
             xs={3}
-            // sm={8}
-            // md={4}
             justifyContent={"center"}
           >
             <MovieCard movie={movie} />
