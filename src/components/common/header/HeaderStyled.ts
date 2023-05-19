@@ -15,9 +15,16 @@ export const HeaderContainer = styled.header<ICustomizableStyledComponent>`
 
   &:hover {
     background: rgba(0, 0, 0, 0.8);
-    background-image: ${(props) => `url(${props.bgimageonhover})`};
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 30%;
+
+    .liblab-text {
+      color: darkorange;
+      opacity: 0.5;
+    }
+  }
+
+  .liblab-text {
+    transition: 2s;
+    opacity: 0;
+    text-shadow: 2px 2px white;
   }
 `;

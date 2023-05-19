@@ -10,7 +10,7 @@ import Records from "../records/Records";
 const CharactersList = () => {
   const query = "character";
   const [currentPage, setCurrentPage] = useState(1);
-  const [recordsPerPage] = useState(30);
+  const [recordsPerPage] = useState(27);
   const { data, isLoading, isError, error } = useQuery(
     [CHARACTERS_QUERY_KEY, query],
     () => getData(query)
