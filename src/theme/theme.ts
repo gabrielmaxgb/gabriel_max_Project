@@ -37,7 +37,6 @@ export const theme = createTheme({
     },
     secondary: {
       main: "#000000",
-      // main: "#ffffff",
     },
   },
   typography: {
