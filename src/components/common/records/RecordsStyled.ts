@@ -4,6 +4,9 @@ import { Grid } from "@mui/material";
 
 export const RecordsContainer = styled(Grid)<ICustomizableStyledComponent>`
   margin-bottom: 3rem;
+  height: 60vh;
+  overflow-y: auto;
+  width: 100vw;
 
   .search-input-container {
     display: flex;
@@ -11,6 +14,10 @@ export const RecordsContainer = styled(Grid)<ICustomizableStyledComponent>`
     justify-content: center;
     background-color: ${(props) => props.bgColor};
     width: 100%;
+
+    #clear-search-btn {
+      margin-left: 1rem;
+    }
   }
 `;
 

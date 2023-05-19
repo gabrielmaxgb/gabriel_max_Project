@@ -10,7 +10,7 @@ import Records from "../records/Records";
 const CharactersList = () => {
   const query = "character";
   const [currentPage, setCurrentPage] = useState(1);
-  const [recordsPerPage] = useState(27);
+  const [recordsPerPage, setRecordsPerPage] = useState(27);
   const { data, isLoading, isError, error } = useQuery(
     [CHARACTERS_QUERY_KEY, query],
     () => getData(query)
@@ -35,16 +35,14 @@ const CharactersList = () => {
   return (
     <>
       <CharacterListContainer>
-        <Records
-          currentRecords={currentRecords}
-          allRecords={data?.docs}
-          // setSearchCharacters={setSearchCharacters}
-        />
-        <Pagination
-          nPages={nPages}
-          currentPage={currentPage}
-          setCurrentPage={setCurrentPage}
-        />
+        <Records currentRecords={currentRecords} allRecords={data?.docs} />
+        <div id="pagination">
+          <Pagination
+            nPages={nPages}
+            currentPage={currentPage}
+            setCurrentPage={setCurrentPage}
+          />
+        </div>
       </CharacterListContainer>
     </>
   );

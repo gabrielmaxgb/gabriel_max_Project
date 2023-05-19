@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { CharacterDTO } from "../../../services/types";
 import { IRecordsProps } from "./types";
 import Record from "./record/Record";
-import { useTheme, Button } from "@mui/material";
+import { useTheme, Button, Typography } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 
 const Records = ({ currentRecords, allRecords }: IRecordsProps) => {
@@ -30,8 +30,8 @@ const Records = ({ currentRecords, allRecords }: IRecordsProps) => {
       });
     }
 
-    const filteredRecords = allRecords?.filter(
-      (record) => record.name.toUpperCase() === searchParam.toUpperCase()
+    const filteredRecords = allRecords?.filter((record) =>
+      record.name.toUpperCase().includes(searchParam.toUpperCase())
     );
     return filteredRecords?.map((record: CharacterDTO) => {
       return <Record key={record._id} record={record} />;
@@ -44,7 +44,7 @@ const Records = ({ currentRecords, allRecords }: IRecordsProps) => {
         item
         container
         xs={12}
-        alignItems={"center"}
+        alignItems={"start"}
         justifyContent={"center"}
       >
         <div className="search-input-container">
@@ -56,6 +56,13 @@ const Records = ({ currentRecords, allRecords }: IRecordsProps) => {
           />
           <Button variant="contained">
             <SearchIcon fontSize="large" color="secondary" />
+          </Button>
+          <Button
+            onClick={() => setSearchParam("")}
+            id="clear-search-btn"
+            variant="outlined"
+          >
+            <Typography variant="h6">Clear search</Typography>
           </Button>
         </div>
         {renderRecords()}

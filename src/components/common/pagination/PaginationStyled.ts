@@ -4,10 +4,9 @@ import { ICustomizableStyledComponent } from "../../../types/style/stylingTypes"
 export const PaginationContainer = styled.div<ICustomizableStyledComponent>`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 
   padding: 1rem;
   border-radius: 12px;
-  /* background-color: ${(props) => props.bgColor}; */
   background-color: rgb(164, 74, 8, 0.8);
 `;

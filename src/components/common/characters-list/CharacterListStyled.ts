@@ -5,9 +5,13 @@ export const CharacterListContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  /* background-color: pink; */
 
   max-width: 100%;
-  /* height: 100%; */
   cursor: pointer;
+
+  #pagination {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
 `;
