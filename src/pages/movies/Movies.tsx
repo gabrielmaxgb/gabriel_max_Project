@@ -1,20 +1,39 @@
-import { useQuery } from "react-query";
-import { getMovies } from "../../services/get-movies/getMovies";
-import { Button, CircularProgress, Typography } from "@mui/material";
-import MoviesList from "./movies-list/MoviesList";
+import { Button, useTheme } from "@mui/material";
+import { MoviesContainer } from "./MoviesStyled";
+import MoviesList from "../../components/common/movies-list/MoviesList";
+import dayRivendel from "../../assets/images/dayRivendel.png";
+import smeagol from "../../assets/images/smeagol.jpg";
+import ActionArea from "../../components/common/action-area/ActionArea";
+import Header from "../../components/common/header/Header";
+import { useNavigate } from "react-router-dom";
 
 function Movies() {
-  const { data, isLoading, isError } = useQuery("lotr_movies", getMovies);
-
-  if (isLoading) {
-    return <CircularProgress />;
-  }
+  const theme = useTheme();
+  const navigate = useNavigate();
 
   return (
     <>
-      <Typography variant="h2">hello lotr fan</Typography>
-      <h2>hello lotr fan</h2>
-      <MoviesList movies={data?.docs} />
+      <MoviesContainer
+        bgimage={dayRivendel}
+        bgimageonhover={smeagol}
+        item
+        container
+        xs={12}
+        justifyContent={"center"}
+        alignItems={"space-between"}
+      >
+        <Header />
+        <Button
+          className="more-button"
+          onClick={() => navigate("/characters-and-quotes")}
+          variant="contained"
+        >
+          I NEED more information
+        </Button>
+        <ActionArea linearGradientColor={theme.extraColors.black}>
+          <MoviesList />
+        </ActionArea>
+      </MoviesContainer>
     </>
   );
 }
