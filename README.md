@@ -4,6 +4,7 @@ LibLabs Lord of the Rings API Project
 This is a React Vite project that allows you to make requests to an API of the Lord of the Rings. The project is set up with Vite.
 
  ![Screen_Recording_2023-05-19_at_14_23_13_AdobeExpress](https://github.com/gabrielmaxgb/gabriel_max_Project/assets/38226225/4978bfd4-480a-4ad0-b62a-e1e7332c91ce)
+(outdated)
 
 Project Setup
 -------------
