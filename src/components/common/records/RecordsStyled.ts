@@ -1,7 +1,8 @@
 import styled from "@emotion/styled";
 import { ICustomizableStyledComponent } from "../../../types/style/stylingTypes";
+import { Grid } from "@mui/material";
 
-export const RecordsContainer = styled.div<ICustomizableStyledComponent>`
+export const RecordsContainer = styled(Grid)<ICustomizableStyledComponent>`
   margin-bottom: 3rem;
 
   .search-input-container {
@@ -9,10 +10,11 @@ export const RecordsContainer = styled.div<ICustomizableStyledComponent>`
     align-items: center;
     justify-content: center;
     background-color: ${(props) => props.bgColor};
+    width: 100%;
   }
 `;
 
-export const RecordContainer = styled.div<ICustomizableStyledComponent>`
+export const RecordContainer = styled(Grid)<ICustomizableStyledComponent>`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -20,7 +22,6 @@ export const RecordContainer = styled.div<ICustomizableStyledComponent>`
   width: 100%;
   padding: 0.5rem 1rem;
   transition: 1s;
-  /* background-color: ${(props) => props.bgColor}; */
 
   &:hover {
     background-color: rgba(162, 162, 162, 0.2);

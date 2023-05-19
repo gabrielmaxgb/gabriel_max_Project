@@ -1,5 +1,5 @@
 import { Typography, useTheme } from "@mui/material";
-import React, { useState } from "react";
+import { useState } from "react";
 import { RecordContainer } from "../RecordsStyled";
 import { IRecordProps } from "../types";
 import GenericModal from "../../generic-modal/GenericModal";
@@ -11,11 +11,14 @@ function Record({ record }: IRecordProps) {
   return (
     <>
       <RecordContainer
+        item
+        container
+        xs={4}
         bgColor={theme.extraColors.black}
         key={record._id}
         onClick={() => setModalOpen(true)}
       >
-        <Typography variant="h4">.{record.name}</Typography>
+        <Typography variant="h5">.{record.name}</Typography>
       </RecordContainer>
 
       {isModalOpen && (
