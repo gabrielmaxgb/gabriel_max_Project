@@ -36,7 +36,7 @@ To get started with this project, please follow these steps:
 Features
 --------
 
-### 1\. Fetch Characters
+### 1\. Fetch features
 
 The project provides a simple example of fetching characters from the Lord of the Rings API. The `CharacterList` component is already set up to make a request to the API and display the list of movies, characters and quotes.
 
