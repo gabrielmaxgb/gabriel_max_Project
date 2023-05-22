@@ -12,7 +12,7 @@ export const RecordsContainer = styled(Grid)<ICustomizableStyledComponent>`
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: ${(props) => props.bgColor};
+    background-color: ${(props) => props.bgcolor};
     width: 100%;
 
     #clear-search-btn {
@@ -27,6 +27,7 @@ export const RecordContainer = styled(Grid)<ICustomizableStyledComponent>`
   justify-content: center;
 
   width: 100%;
+  cursor: pointer;
   padding: 0.5rem 1rem;
   transition: 1s;
 

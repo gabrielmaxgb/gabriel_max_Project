@@ -1,27 +1,20 @@
 import AnimatedPage from "../../layout/animations/AnimatedPage";
-import { InputField, RecordsContainer } from "./RecordsStyled";
+import { RecordsContainer } from "./RecordsStyled";
 import { useEffect, useState } from "react";
 import { CharacterDTO } from "../../../services/types";
 import { IRecordsProps } from "./types";
 import Record from "./record/Record";
-import { useTheme, Button, Typography } from "@mui/material";
-import SearchIcon from "@mui/icons-material/Search";
 
-const Records = ({ currentRecords, allRecords }: IRecordsProps) => {
-  const theme = useTheme();
-  const [records, setRecords] = useState<CharacterDTO[]>();
-  const [searchParam, setSearchParam] = useState("");
+const Records = ({
+  charactersPerPage,
+  allRecords,
+  searchParam,
+}: IRecordsProps) => {
+  const [records, setRecords] = useState<CharacterDTO[]>(charactersPerPage);
 
   useEffect(() => {
-    setRecords(currentRecords);
-  }, [currentRecords]);
-
-  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement> | any) => {
-    if (e.key === "Enter") {
-      console.log("enter pressed", e.target.value);
-      setSearchParam(e.target.value);
-    }
-  };
+    setRecords(charactersPerPage);
+  }, [charactersPerPage]);
 
   const renderRecords = () => {
     if (searchParam === "") {
@@ -29,7 +22,6 @@ const Records = ({ currentRecords, allRecords }: IRecordsProps) => {
         return <Record key={record._id} record={record} />;
       });
     }
-
     const filteredRecords = allRecords?.filter((record) =>
       record.name.toUpperCase().includes(searchParam.toUpperCase())
     );
@@ -45,24 +37,8 @@ const Records = ({ currentRecords, allRecords }: IRecordsProps) => {
         container
         xs={12}
         alignItems={"start"}
-        justifyContent={"center"}
+        justifyContent={"start"}
       >
-        <div className="search-input-container">
-          <InputField
-            textColor={theme.palette.primary.main}
-            type="text"
-            color={theme.palette.primary.main}
-            onKeyDown={(e) => handleKeyDown(e)}
-          />
-          <SearchIcon fontSize="large" color="primary" />
-          <Button
-            onClick={() => setSearchParam("")}
-            id="clear-search-btn"
-            variant="outlined"
-          >
-            <Typography variant="h6">Clear search</Typography>
-          </Button>
-        </div>
         {renderRecords()}
       </RecordsContainer>
     </AnimatedPage>

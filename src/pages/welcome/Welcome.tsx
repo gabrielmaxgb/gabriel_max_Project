@@ -26,7 +26,7 @@ function Welcome() {
                 pt={"1rem"}
                 display={"flex"}
                 alignItems={"center"}
-                variant="subtitle2"
+                variant="h5"
               >
                 <CodeIcon fontSize="small" />
                 &nbsp;By Gabriel Max&nbsp;

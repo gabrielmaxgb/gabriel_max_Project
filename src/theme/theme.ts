@@ -40,6 +40,7 @@ export const theme = createTheme({
     },
   },
   typography: {
+    fontSize: 12,
     allVariants: {
       color: "#ff7300",
     },

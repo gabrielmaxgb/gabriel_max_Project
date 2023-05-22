@@ -4,11 +4,12 @@ import { ICustomizableStyledComponent } from "../../../types/style/stylingTypes"
 export const ActionAreaContainer = styled.div<ICustomizableStyledComponent>`
   .action-area {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
 
     box-sizing: border-box;
+    max-height: 100%;
+    overflow-y: auto;
     width: 100vw;
     height: 55vh;
     opacity: 0;

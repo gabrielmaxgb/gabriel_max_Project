@@ -13,12 +13,16 @@ function Record({ record }: IRecordProps) {
       <RecordContainer
         item
         container
-        xs={4}
-        bgColor={theme.extraColors.black}
+        xs={10}
+        sm={6}
+        md={4}
+        bgcolor={theme.extraColors.black}
         key={record._id}
         onClick={() => setModalOpen(true)}
       >
-        <Typography variant="h5">.{record.name}</Typography>
+        <Typography className="character" variant="h5">
+          .{record.name}
+        </Typography>
       </RecordContainer>
 
       {isModalOpen && (

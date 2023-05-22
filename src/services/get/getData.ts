@@ -11,9 +11,5 @@ export const getData = async (query: string) => {
   });
   const data = await response.json();
 
-  // console.log("API_KEY", API_KEY);
-  // console.log("BASE_URL", BASE_URL);
-  // console.log("getData data", data);
-
   return data;
 };

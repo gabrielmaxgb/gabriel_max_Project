@@ -14,7 +14,7 @@ function MovieCard({ movie }: IMovieCardProps) {
 
   return (
     <CardContainer
-      bgColor={theme.extraColors.black}
+      bgcolor={theme.extraColors.black}
       bgColorOnHover={theme.extraColors.white}
       bgimageonhover={BG_IMAGES[movie?.name]}
     >

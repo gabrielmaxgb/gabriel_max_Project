@@ -26,7 +26,9 @@ function MoviesList() {
       component={"section"}
       item
       container
-      xs={8}
+      xs={10}
+      sm={11}
+      md={8}
       justifyContent={"center"}
       spacing={1}
     >
@@ -37,7 +39,9 @@ function MoviesList() {
             key={movie?._id}
             item
             container
-            xs={3}
+            xs={12}
+            sm={6}
+            md={3}
             justifyContent={"center"}
           >
             <MovieCard movie={movie} />

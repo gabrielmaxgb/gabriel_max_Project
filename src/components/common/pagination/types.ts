@@ -1,5 +1,5 @@
 export interface IPaginationProps {
-  nPages: number;
+  numberOfPages: number;
   currentPage: number;
   setCurrentPage: React.Dispatch<React.SetStateAction<number>>;
 }

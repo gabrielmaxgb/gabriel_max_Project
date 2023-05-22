@@ -9,7 +9,7 @@ export const Content = styled.div<ICustomizableStyledComponent>`
   width: 80vw;
   max-width: 80vw;
   height: 70vh;
-  background-color: ${(props) => props.bgColor || "black"};
+  background-color: ${(props) => props.bgcolor || "black"};
   background-image: ${(props) => `url(${props.bgimage})`};
   background-repeat: no-repeat;
   background-position: center;

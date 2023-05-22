@@ -6,7 +6,7 @@ const CharacterCard = () => {
   const theme = useTheme();
 
   return (
-    <CharacterCardContainer bgColor={theme.palette.primary.light}>
+    <CharacterCardContainer bgcolor={theme.palette.primary.light}>
       CharacterCard
     </CharacterCardContainer>
   );
