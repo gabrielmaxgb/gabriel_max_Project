@@ -8,7 +8,6 @@ export const MoviesContainer = styled(Grid)<ICustomizableStyledComponent>`
   justify-content: space-between;
   flex-direction: column;
 
-  min-width: 100vw;
   min-height: 100vh;
   background-image: ${(props) => `url(${props.bgimage})`};
   background-repeat: no-repeat;
@@ -18,7 +17,7 @@ export const MoviesContainer = styled(Grid)<ICustomizableStyledComponent>`
   .more-button {
     font-size: 2rem;
     color: black;
-    background-color: ${(props) => `url(${props.bgColor})`};
+    background-color: ${(props) => `url(${props.bgcolor})`};
     transition: 2s;
   }
 

@@ -10,5 +10,5 @@ export const CharacterCardContainer = styled(
   justify-content: center;
   align-items: start;
 
-  background-color: ${(props) => props.bgColor};
+  background-color: ${(props) => props.bgcolor};
 `;

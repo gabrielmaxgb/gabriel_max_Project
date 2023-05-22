@@ -9,14 +9,12 @@ export const CardContainer = styled.div<ICustomizableStyledComponent>`
 
   padding: 0.5rem 1.4rem;
   border-radius: 8px;
-  background-color: ${(props) => `${props.bgColor}`};
+  background-color: ${(props) => `${props.bgcolor}`};
   box-sizing: border-box;
   width: 100%;
-  /* transition: 1s; */
+  transition: 1s;
 
   &:hover {
-    /* background-color: ${(props) => props.bgColorOnHover}; */
-    /* background-color: none; */
     background-image: ${(props) => `url(${props.bgimageonhover})`};
     background-repeat: no-repeat;
     background-position: center;

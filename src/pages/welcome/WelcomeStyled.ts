@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import { ICustomizableStyledComponent } from "../../types/style/stylingTypes";
-import { Button, Grid } from "@mui/material";
+import { Grid } from "@mui/material";
 
 export const WelcomeContainer = styled(Grid)<ICustomizableStyledComponent>`
   min-width: 100vw;

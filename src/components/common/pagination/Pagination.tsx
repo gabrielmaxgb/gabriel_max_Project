@@ -3,15 +3,14 @@ import { PaginationContainer } from "./PaginationStyled";
 import { useTheme, Button, Typography } from "@mui/material";
 
 const Pagination = ({
-  nPages,
+  numberOfPages,
   currentPage,
   setCurrentPage,
 }: IPaginationProps) => {
   const theme = useTheme();
-  // const pageNumbers = [...Array(nPages + 1).keys()].slice(1);
 
   const nextPage = () => {
-    if (currentPage !== nPages) setCurrentPage(currentPage + 1);
+    if (currentPage !== numberOfPages) setCurrentPage(currentPage + 1);
   };
   const prevPage = () => {
     if (currentPage !== 1) setCurrentPage(currentPage - 1);
@@ -19,7 +18,7 @@ const Pagination = ({
 
   return (
     <>
-      <PaginationContainer bgColor={theme.palette.primary.main}>
+      <PaginationContainer bgcolor={theme.palette.primary.main}>
         <Button
           disabled={currentPage === 1}
           variant="contained"
@@ -28,10 +27,10 @@ const Pagination = ({
           Previous page
         </Button>
         <Typography m={"0 2rem"} variant="h4" color={theme.extraColors.black}>
-          {currentPage}/{nPages}
+          {currentPage}/{numberOfPages}
         </Typography>
         <Button
-          disabled={currentPage === nPages}
+          disabled={currentPage === numberOfPages}
           variant="contained"
           onClick={nextPage}
         >

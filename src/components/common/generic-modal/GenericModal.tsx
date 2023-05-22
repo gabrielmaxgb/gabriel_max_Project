@@ -22,8 +22,6 @@ const GenericModal = ({ open, handleClose, modalData }: IGenericModal) => {
     () => getData(query)
   );
 
-  console.log("modalData", modalData);
-
   if (isLoading) {
     return (
       <div
@@ -48,7 +46,7 @@ const GenericModal = ({ open, handleClose, modalData }: IGenericModal) => {
 
   return (
     <Modal open={open} onClose={handleClose}>
-      <Content bgColor={theme.extraColors.black} bgimage={hobbitVillage}>
+      <Content bgcolor={theme.extraColors.black} bgimage={hobbitVillage}>
         <QuoteContainer>
           <div>
             <Typography variant="h2">

@@ -9,8 +9,7 @@ export const HeaderContainer = styled.header<ICustomizableStyledComponent>`
   background: rgba(0, 0, 0, 0.3);
   padding: 0.5rem 2rem;
   box-sizing: border-box;
-  min-width: 100vw;
-  height: auto;
+  width: 100vw;
   transition: 2s;
 
   &:hover {

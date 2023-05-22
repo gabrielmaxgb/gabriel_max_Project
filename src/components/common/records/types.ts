@@ -1,9 +1,9 @@
-import { MouseEventHandler } from "react";
 import { CharacterDTO } from "../../../services/types";
 
 export interface IRecordsProps {
-  currentRecords: CharacterDTO[];
+  charactersPerPage: CharacterDTO[];
   allRecords?: CharacterDTO[];
+  searchParam: string;
 }
 
 export interface IRecordProps {

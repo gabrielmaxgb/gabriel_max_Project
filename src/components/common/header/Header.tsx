@@ -7,7 +7,7 @@ function Header() {
   const theme = useTheme();
   return (
     <HeaderContainer
-      bgColor={theme.extraColors.black}
+      bgcolor={theme.extraColors.black}
       bgimageonhover={LiblabLogo}
     >
       <Typography
