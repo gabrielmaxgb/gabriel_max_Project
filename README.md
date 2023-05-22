@@ -19,7 +19,7 @@ To get started with this project, please follow these steps:
 
     `cd gabriel_max_Project`
 
-3.  Install the dependencies using npm or Yarn:
+3.  Install the dependencies using npm:
 
     `npm install`
 
